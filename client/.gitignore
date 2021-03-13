@@ -17,7 +17,12 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.tavis.yml1
+kubernetes-dashboard.yml
+service-account.json.enc
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
