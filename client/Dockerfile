@@ -2,7 +2,7 @@ FROM node:alpine as builder
 WORKDIR '/app'
 COPY ./client/package.json ./
 RUN npm install
-COPY . .
+COPY ./client .
 RUN npm run build
 
 FROM nginx
