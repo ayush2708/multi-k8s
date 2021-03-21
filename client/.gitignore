@@ -24,5 +24,6 @@ service-account.json.enc
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+main.tf
 
 
