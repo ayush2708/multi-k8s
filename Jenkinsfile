@@ -14,15 +14,12 @@
             stage('Push Docker image') {
                 steps {
                     echo 'Pushing Docker Images to Docker Hub'
-                    node {
-                          checkout scm
-                          docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
+                    docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
                     script {
                         client.push()
                         server.push()
                         worker.push()
-                    }
-                  }  
+                    }  
                 }
             }            
         }
