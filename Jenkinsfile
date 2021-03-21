@@ -11,5 +11,15 @@
                     }
                 }
             }
+            stage('Push Docker image') {
+                steps {
+                    echo 'Pushing Docker Images to Docker Hub'
+                    script {
+                        client.push()
+                        server.push()
+                        worker.push()
+                    }
+                }
+            }            
         }
     }
