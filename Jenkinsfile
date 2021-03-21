@@ -14,8 +14,8 @@
             stage('Push Docker image') {
                 steps {
                     echo 'Pushing Docker Images to Docker Hub'
-                    docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
                     script {
+                        docker.withRegistry('https://registry.hub.docker.com', 'DockerHub')
                         client.push()
                         server.push()
                         worker.push()
