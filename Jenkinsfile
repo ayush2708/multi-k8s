@@ -35,7 +35,9 @@ pipeline {
         } 
         stage('Cleaning up') { 
             steps { 
-                sh "docker rmi $registry:latest" 
+                sh "docker rmi $client:latest"
+                sh "docker rmi $server:latest" 
+                sh "docker rmi $worker:latest"
             }
         } 
     }
