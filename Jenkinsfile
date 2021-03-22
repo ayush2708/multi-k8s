@@ -16,9 +16,9 @@ pipeline {
         stage('Building our image') { 
             steps { 
                 script { 
-                        def client = docker.build("ayush2708/multi-client","-f ${env.WORKSPACE}/client/Dockerfile .")
-                        def server = docker.build("ayush2708/multi-server","-f ${env.WORKSPACE}/server/Dockerfile .") 
-                        def worker = docker.build("ayush2708/multi-worker","-f ${env.WORKSPACE}/worker/Dockerfile .") 
+                        client = docker.build("ayush2708/multi-client","-f ${env.WORKSPACE}/client/Dockerfile .")
+                        server = docker.build("ayush2708/multi-server","-f ${env.WORKSPACE}/server/Dockerfile .") 
+                        worker = docker.build("ayush2708/multi-worker","-f ${env.WORKSPACE}/worker/Dockerfile .") 
                 }
             } 
         }
